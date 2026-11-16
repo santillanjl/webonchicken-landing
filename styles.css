@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  color-scheme: dark;
+  --ink: #17130f;
+  --paper: #f5efe4;
+  --muted: #b7ad9f;
+  --orange: #ff6b35;
+  --yellow: #ffc857;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.landing {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 7.2%;
+  background:
+    radial-gradient(ellipse at 82% 48%, rgb(255 107 53 / 8%), transparent 36%),
+    var(--ink);
+}
+
+.topbar,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar {
+  min-height: 94px;
+  border-bottom: 1px solid rgb(245 239 228 / 12%);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+}
+
+.wordmark-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--ink);
+  font-size: 19px;
+}
+
+.wordmark-accent {
+  color: var(--orange);
+}
+
+.topbar-note,
+.eyebrow,
+.art-label,
+.art-caption,
+.footer {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.topbar-note {
+  color: var(--muted);
+}
+
+.hero {
+  display: grid;
+  flex: 1;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 5%;
+  padding: 55px 0 65px;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 570px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 28px;
+  color: var(--yellow);
+}
+
+.eyebrow-dot,
+.status-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 14px rgb(255 107 53 / 60%);
+}
+
+h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(58px, 8.3vw, 112px);
+  font-weight: 600;
+  letter-spacing: -0.085em;
+  line-height: 0.94;
+}
+
+h1 span {
+  color: var(--orange);
+}
+
+.intro {
+  max-width: 415px;
+  margin: 27px 0 26px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.cta {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  gap: 28px;
+  padding: 0 20px;
+  border: 1px solid var(--orange);
+  border-radius: 4px;
+  background: var(--orange);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  background: transparent;
+  color: var(--paper);
+}
+
+.cta span {
+  font-size: 17px;
+}
+
+.cta-note {
+  margin: 13px 0 0;
+  color: #84796b;
+  font-size: 11px;
+}
+
+.hero-art {
+  position: relative;
+  display: grid;
+  width: min(100%, 470px);
+  aspect-ratio: 1;
+  justify-self: end;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgb(245 239 228 / 14%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, #f8b64c 0 19%, transparent 19.3%),
+    radial-gradient(circle at 50% 50%, #b64025 0 38%, transparent 38.3%),
+    radial-gradient(circle at 50% 50%, #54251d 0 57%, transparent 57.3%),
+    #241a15;
+  box-shadow: 0 28px 100px rgb(0 0 0 / 35%);
+}
+
+.hero-art::before,
+.hero-art::after {
+  position: absolute;
+  width: 150%;
+  height: 1px;
+  background: rgb(245 239 228 / 17%);
+  content: "";
+}
+
+.hero-art::before {
+  transform: rotate(45deg);
+}
+
+.hero-art::after {
+  transform: rotate(-45deg);
+}
+
+.art-sun {
+  position: absolute;
+  width: 44%;
+  aspect-ratio: 1;
+  border: 1px solid rgb(23 19 15 / 30%);
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 55px rgb(255 200 87 / 26%);
+}
+
+.art-ring {
+  position: absolute;
+  border: 1px solid rgb(245 239 228 / 25%);
+  border-radius: 50%;
+}
+
+.art-ring-one {
+  width: 69%;
+  aspect-ratio: 1;
+}
+
+.art-ring-two {
+  width: 88%;
+  aspect-ratio: 1;
+  border-style: dashed;
+  opacity: 0.7;
+}
+
+.art-label,
+.art-caption,
+.art-stamp {
+  position: absolute;
+  z-index: 1;
+  color: var(--paper);
+}
+
+.art-label {
+  top: 18%;
+  padding: 9px 13px;
+  border: 1px solid rgb(245 239 228 / 42%);
+  border-radius: 2px;
+  background: var(--ink);
+  transform: rotate(-8deg);
+}
+
+.art-stamp {
+  display: grid;
+  width: 92px;
+  height: 92px;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: -0.1em;
+  transform: rotate(-12deg);
+}
+
+.art-stamp span {
+  position: absolute;
+  margin: 23px 0 0 25px;
+  color: var(--paper);
+  font-size: 19px;
+}
+
+.art-caption {
+  right: 12%;
+  bottom: 22%;
+  text-align: right;
+  line-height: 1.6;
+}
+
+.footer {
+  min-height: 75px;
+  border-top: 1px solid rgb(245 239 228 / 12%);
+  color: #84796b;
+  font-size: 9px;
+}
+
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background: #8dca72;
+  box-shadow: none;
+}
+
+@media (max-width: 760px) {
+  .landing {
+    padding: 0 6%;
+  }
+
+  .topbar {
+    min-height: 76px;
+  }
+
+  .wordmark {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .wordmark-mark {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 58px 0 52px;
+  }
+
+  .hero-copy {
+    max-width: 540px;
+  }
+
+  .eyebrow {
+    margin-bottom: 22px;
+    font-size: 9px;
+  }
+
+  h1 {
+    font-size: clamp(58px, 14vw, 92px);
+  }
+
+  .intro {
+    max-width: 440px;
+    font-size: 14px;
+  }
+
+  .hero-art {
+    width: min(84vw, 370px);
+    justify-self: center;
+  }
+
+  .footer {
+    min-height: 66px;
+    gap: 12px;
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media (max-width: 420px) {
+  .topbar-note {
+    font-size: 8px;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
